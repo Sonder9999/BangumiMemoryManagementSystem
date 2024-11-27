@@ -1,0 +1,130 @@
+﻿<Window x:Class="BangumiMemoryManagementSystem.AdminStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BangumiMemoryManagementSystem"
+        mc:Ignorable="d"
+        Title="AdminStatistics" Height="670" Width="1070" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF24DACF" Offset="1"/>
+                <GradientStop Color="#FF41B7E6" Offset="0"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+
+            <!-- 顶部图片 -->
+            <RowDefinition Height="Auto"/>
+
+            <!-- 主要内容区域 -->
+            <RowDefinition Height="*"/>
+
+            <!-- 底部图片 -->
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <!-- 左侧区域 -->
+            <ColumnDefinition Width="*"/>
+
+            <!-- 主要内容区域 -->
+            <ColumnDefinition Width="3*"/>
+
+            <!-- 右侧区域 -->
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <!-- 顶部Logo/用户信息 -->
+        <!-- <Image Grid.Row="0" Grid.ColumnSpan="3" Source="pic/logo/Logo_Top_SonderBangumi.png" Stretch="Uniform" MaxHeight="150"/>-->
+        <!-- 这里可以考虑修改代码,使这个图片变为随机的,只需要更换源就行了,使用随机数生成器  已实现√-->
+        <!-- 其他的地方只要是有图片的都可以考虑使用这种方法来生成,比如上面的logo和角色立绘 -->
+        <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Stretch="Uniform">
+            <StackPanel Name="TopLogo_StackPanel_AdminStastics" Orientation="Horizontal">
+                <Image Name="TopLogo_01_Image_AdminStastics" Source="pic/Firefly_Logo/Random/firefly_Sonder/firefly_meme_0_Sonder_2.png" MaxHeight="150"/>
+                <Image Name="TopLogo_02_Image_AdminStastics" Source="pic/Firefly_Logo/Random/firefly_Bangumi/firefly_meme_1_Bangumi_4.png" MaxHeight="150"/>
+                <Image Name="TopLogo_03_Image_AdminStastics" Source="pic/Firefly_Logo/Random/firefly_Management/firefly_meme_2_Management_5.png" MaxHeight="150"/>
+                <Image Name="TopLogo_04_Image_AdminStastics" Source="pic/Firefly_Logo/Random/firefly_System/firefly_meme_3_System_7.png" MaxHeight="150"/>
+            </StackPanel>
+        </Viewbox>
+
+        <!-- Top Left Logo-->
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Source="pic/logo/logo_Blood.png" Stretch="Uniform" Panel.ZIndex="-1" Margin="0,65,0,0"/>
+
+        <!-- Top Left Logo -->
+        <Image Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Source="pic/logo/logo_Cat.png" Stretch="Uniform" Panel.ZIndex="-1" Margin="0,65,0,0"/>
+
+        <!-- 左侧角色图片 -->
+        <Image Grid.Row="1" Grid.Column="0" Source="pic/Character/AdminStatistics_Character_Left_Komari.png" Stretch="Uniform"  />
+
+        <!-- 右侧角色图片 -->
+        <Image Grid.Row="1" Grid.Column="2" Source="pic/Character/AdminStatistics_Character_Right_Karla.png" Stretch="Uniform" HorizontalAlignment="Right" />
+
+        <!-- Bottom Logo -->
+        <Image Grid.Row="2" Grid.ColumnSpan="3" Source="pic/Slide/Slide_Bottom_Makeine.png" Stretch="Uniform" MaxHeight="100"/>
+
+        <Button x:Name="Exit_Button_AdminStatistics" Content="Exit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="54" Width="112" Click="Exit_Button_AdminStatistics_Click" Margin="0,10,10,0" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold"   >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF5AAFF"/>
+                    <GradientStop Color="#FFD9BDFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <!-- 用户管理页面跳转按钮(改进) -->
+        <Button Name="User_Button_AdminStatistics" Content="User" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="55" Width="128" Margin="10,10,0,0" Click="User_Button_AdminStatistics_Click" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold"  >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF7DC0D9" Offset="1"/>
+                    <GradientStop Color="#FF4AC1F0" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <!-- 主要内容区域 -->
+        <Grid Grid.Row="1" Grid.Column="1">
+
+            <!-- 分三行 -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- 垂直排列 -->
+            <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="用户总数" FontFamily="悠哉字体" FontSize="40" FontWeight="Bold" Background="#00000000" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Label x:Name="UserAmount_Label_AdminStatistics" Content="数量" FontFamily="悠哉字体" FontSize="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="番剧总数" FontFamily="悠哉字体" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Label x:Name="BangumiAmount_Label_AdminStatistics" Content="数量" FontFamily="悠哉字体" FontSize="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox x:Name="ChangePassWord_TextBox_AdminStatistics" Width="250" Text=""  TextAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,30,0" FontFamily="悠哉字体" FontSize="30" FontWeight="Bold"/>
+
+                <Button x:Name="ChangePassWord_Button_AdminStatistics" Click="ChangePassWord_Button_AdminStatistics_Click" Content="Change Password" Height="50" Width="250" FontFamily="悠哉字体" FontSize="30" FontWeight="Bold" Panel.ZIndex="0" >
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FFEDB3DE"/>
+                            <GradientStop Color="#FFD47FF8" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                </Button>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>

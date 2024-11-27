@@ -1,0 +1,114 @@
+﻿<Window x:Class="BangumiMemoryManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BangumiMemoryManagementSystem"
+        mc:Ignorable="d"
+        Title="Login" Height="430" Width="600" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        
+        <!-- 设置Grid的背景图片,与背景颜色只能生效一个 -->
+        <Grid.Background>
+            <ImageBrush ImageSource="/pic/BackGround/wallpaper01.jpg" Stretch="UniformToFill" Opacity="0.8"/>
+        </Grid.Background>
+        
+        <!-- 设置Grid的背景颜色,直接在控件属性页面生成的 -->
+        <!--<Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF24DACF" Offset="1"/>
+                <GradientStop Color="#FF41B7E6" Offset="0"/>
+            </RadialGradientBrush>
+        </Grid.Background>-->
+        
+        
+        <!-- 定义Grid的行和列,用于布局,此外还要自适应分辨率 -->
+        <Grid.RowDefinitions>
+
+            <!-- 顶部图片 -->
+            <RowDefinition Height="Auto"/>
+            <!-- 中间输入区域 -->
+            <RowDefinition Height="*"/>
+            <!-- 底部滚动条 -->
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            
+            <!-- 左侧角色图片 -->
+            <ColumnDefinition Width="*"/>
+            <!-- 中间输入区域 -->
+            <ColumnDefinition Width="3*"/>
+            <!-- 右侧角色图片 -->
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        
+        <!-- Top Middle Logo -->
+        <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Source="pic/logo/Logo_Top_SonderBangumi.png" Stretch="Uniform" MaxWidth="857" MaxHeight="250"/>
+
+        <!-- Top Left Logo-->
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Source="pic/logo/logo_Yumemirudanshi.png" Stretch="Uniform"/>
+
+        <!-- Top Right Logo -->
+        <Image Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Source="pic/logo/logo_Makeine.png" Stretch="Uniform"/>
+        
+        <!-- Left Character -->
+        <Image Grid.Row="1" Grid.Column="0" Source="pic/Character/Login_Character_Left_Mizuki.png" Stretch="Uniform" HorizontalAlignment="Left" />
+
+        <!-- Right Character -->
+        <Image Grid.Row="1" Grid.Column="2" Source="pic/Character/Login_Character_Right_YanamiAnna.png" Stretch="Uniform"  HorizontalAlignment="Right" MaxWidth="386" MaxHeight="1135" />
+
+        <!-- Bottom Slide -->
+        <Image Grid.Row="2" Grid.ColumnSpan="3" Source="pic/Slide/Slide_Bottom_Makeine.png"/>
+        
+        
+        <!-- 使用 StackPanel 垂直排列输入控件 -->
+        <StackPanel Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center">
+
+            <TextBox Name="UserName_TextBox_Login" Text=""  TextAlignment="Center" VerticalContentAlignment="Center"  FontFamily="站酷文艺体" FontSize="24" Margin="0,0,0,10" Width="162" Height="26"/>
+
+            <PasswordBox Name="Password_PasswordBox_Login" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  PasswordChar="*" FontFamily="站酷文艺体" FontSize="24" Margin="0,0,0,10" Width="162" Height="26"/>
+
+            <!-- 水平排列按钮 这里的是 SignUp 和 Login 按钮-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <Button Name="Signup_Button_Login" Content="注册" Click="Signup_Button_Login_Click" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" Margin="0,0,10,0">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFDAA6F7" Offset="1"/>
+                            <GradientStop Color="#FF4FF4D6" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+                <Button Name="Login_Button_Login" Content="登录" Click="Login_Button_Login_Click" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF4FF4D6" Offset="0"/>
+                            <GradientStop Color="#FFDAA6F7" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+            </StackPanel>
+
+            <!-- 这里是Admin按钮 -->
+            <Button Name="Admin_Button_Login" Content="Admin" HorizontalAlignment="Center" Click="Admin_Button_Login_Click" FontFamily="站酷小薇LOGO体" FontSize="24" Margin="0,10,0,0">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7DE7FF"/>
+                        <GradientStop Color="#FF2AC1E3" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+        
+        
+    </Grid>
+
+</Window>

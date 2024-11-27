@@ -1,0 +1,260 @@
+﻿<Window x:Class="BangumiMemoryManagementSystem.UserPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BangumiMemoryManagementSystem"
+        mc:Ignorable="d"
+        Title="UserPage" Height="670" Width="1070" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+
+        <!-- Grid 相关属性 -->
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF24DACF" Offset="1"/>
+                <GradientStop Color="#FF41B7E6" Offset="0"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+
+            <!-- 顶部图片 -->
+            <RowDefinition Height="Auto"/>
+
+            <!-- 主要内容区域 -->
+            <RowDefinition Height="*"/>
+
+            <!-- 底部图片 -->
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <!-- 左侧区域 -->
+            <ColumnDefinition Width="*"/>
+
+            <!-- 主要内容区域 -->
+            <ColumnDefinition Width="3*"/>
+
+            <!-- 右侧区域 -->
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <!-- 顶部Logo/用户信息 -->
+        <Image Grid.Row="0" Grid.ColumnSpan="3" Source="pic/logo/Logo_Top_SonderBangumi.png" Stretch="Uniform" MaxHeight="150"/>
+        <!--<Label Name="UserName_Label_UserPage" Content="UserName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" Width="140" Height="37"/>-->
+
+        <!--Left Logo Top-->
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Source="pic/logo/logo_Rus.png" Stretch="Uniform" Margin="0,65,0,0"/>
+
+        <!--Right Logo Top-->
+        <Image Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Source="pic/logo/logo_Natsu.png" Stretch="Uniform" Panel.ZIndex="-1" Margin="0,65,0,0"/>
+
+        <!-- Exit Button -->
+        <Button Name="Exit_Button_UserPage" Content="Exit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="54" Width="112" Click="Exit_Button_UserPage_Click" Margin="0,10,10,0" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" Panel.ZIndex="0" >
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF5AAFF"/>
+                    <GradientStop Color="#FFD9BDFF" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <!-- 左侧角色图片 -->
+        <Image Grid.Row="1" Grid.Column="0" Source="pic/Character/UserPage_Character_Left_Mariya.png" Stretch="Uniform"  />
+
+        <!-- 右侧角色图片 -->
+        <Image Grid.Row="1" Grid.Column="2" Source="pic/Character/UserPage_Character_Right_Yuki.png" Stretch="Uniform" HorizontalAlignment="Right" />
+
+        <!-- Bottom Logo -->
+        <Image Grid.Row="2" Grid.ColumnSpan="3" Source="pic/Slide/Slide_Bottom_Makeine.png" Stretch="Uniform" MaxHeight="100"/>
+
+
+        <!-- 主要内容区域 这个小Grid在大Grid里,在大Grid的1行1列 (大 Grid : 0 - 2行, 0 - 2 列 ,即3行3列) -->
+        <Grid Grid.Row="1" Grid.Column="1">
+
+            <!-- 定义这个Grid的行,3行,第一行跟第二行为输入行,第三行为DataGrid -->
+            <Grid.RowDefinitions>
+
+                <!-- 输入框和标签 -->
+                <RowDefinition Height="Auto"/>
+
+                <!-- 按钮 -->
+                <RowDefinition Height="Auto"/>
+
+                <!-- DataGrid -->
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <!-- Part1 标签以及显示框 -->
+            <Grid Grid.Row="0">
+
+                <!-- 输入框和标签-->
+                <Grid.ColumnDefinitions>
+
+                    <!-- Time的Label和TextBox -->
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+
+                    <!-- Name的Label和TextBox -->
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+
+                    <!-- Type的Label和TextBox -->
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <!-- 不需要ID -->
+                <!--<Label Content="ID"  Margin="10" VerticalAlignment="Center"/>
+                <TextBox x:Name="Id_TextBox_UserPage" Grid.Column="1" Margin="10"  IsEnabled="False" Width="80" Height="30"/>-->
+
+                <Label Content="Name" Grid.Column="0" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Name_TextBox_UserPage" Grid.Column="1" Margin="10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+
+                <Label Content="Type" Grid.Column="2" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Type_TextBox_UserPage" Grid.Column="3" Margin="10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+
+                <Label Content="Time" Grid.Column="4" Grid.Row="1" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Time_TextBox_UserPage" Grid.Column="5" Margin="14,10,0,10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+
+            </Grid>
+
+
+            <!-- Part2 增删改查的Button -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+
+                <Button x:Name="Add_Button_UserPage" Content="Add"  Width="70" Height="33" Click="Add_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF30F0F6" Offset="1"/>
+                            <GradientStop Color="#FF40E776"/>
+                            <GradientStop Color="#FF37EBBA" Offset="0.358"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="Delete_Button_UserPage" Content="Delete" Width="70" Height="33" Click="Delete_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFA0202"/>
+                            <GradientStop Color="#FFFF96EA" Offset="1"/>
+                            <GradientStop Color="#FFB80101" Offset="0.012"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="Save_Button_UserPage" Content="Save"  Width="68" Height="33" Click="Save_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFC2FFAC"/>
+                            <GradientStop Color="#FFB9B0FF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+                <TextBox x:Name="Search_TextBox_UserPage"  Width="140" Height="33" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
+
+                <Button x:Name="Search_Button_UserPage" Content="Search" Width="82" Height="33" Click="Search_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFFFCDCD"/>
+                            <GradientStop Color="#FFFFF8CA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="Reset_Button_UserPage" Content="Reset" Width="82" Height="33" Click="Reset_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF74FF7A"/>
+                            <GradientStop Color="#FF35D3FF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
+            </StackPanel>
+
+            <!-- Part3 DataGrid -->
+            <DataGrid x:Name="Bangumi_DataGrid_UserPage" Grid.Row="2" Margin="10" d:ItemsSource="{d:SampleData ItemCount=5}" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" 
+                   IsReadOnly="True" CanUserAddRows="False"  CanUserDeleteRows="False" AutoGenerateColumns="False" SelectionChanged="Bangumi_DataGrid_UserPage_SelectionChanged" SelectionUnit="FullRow">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Type" Binding="{Binding Type}" />
+                    <DataGridTextColumn Header="Time" Binding="{Binding Time}" />
+                    <!-- 隐藏 Id 和 UserId -->
+                    <!--<DataGridTextColumn Header="Id" Binding="{Binding Id}" Visibility="Collapsed" />
+                    <DataGridTextColumn Header="UserId" Binding="{Binding UserId}" Visibility="Collapsed" />-->
+                </DataGrid.Columns>
+
+                <DataGrid.Resources>
+
+                    <Style TargetType="DataGridRow">
+
+                        <!-- 设置文本颜色ForeGround 以及行高和内边距 -->
+                        <!--<Setter Property="Background" Value="Transparent"/>-->
+
+                        <Setter Property="Foreground">
+                            <Setter.Value>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFC09882"/>
+                                    <!-- Mariya的头发颜色 -->
+                                    <GradientStop Color="#FF524850" Offset="1"/>
+                                    <!-- 有希的头发颜色 -->
+                                </LinearGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+
+                        <Setter Property="Height" Value="30"/>
+
+                        <Setter Property="Padding" Value="5"/>
+
+                        <Style.Triggers>
+
+                            <!-- 选中行会高亮 -->
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="DodgerBlue"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+
+                            <!--<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=AlternationIndex}" Value="1">
+                                <Setter Property="Background" Value="LightCyan"/>
+                            </DataTrigger>-->
+
+                        </Style.Triggers>
+
+                    </Style>
+
+                </DataGrid.Resources>
+
+                <!--  这个是奇数行的颜色 -->
+                <DataGrid.AlternatingRowBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF49F1E2"/>
+                        <GradientStop Color="#FF23F739" Offset="1"/>
+                        <GradientStop Color="#FF3DCCED" Offset="0.373"/>
+                    </LinearGradientBrush>
+                </DataGrid.AlternatingRowBackground>
+
+                <!-- 这个是偶数行的颜色 -->
+                <DataGrid.RowBackground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF43E8F3"/>
+                        <GradientStop Color="#FFCE9FF4" Offset="1"/>
+                        <GradientStop Color="#FFA0B8EC" Offset="0.667"/>
+                    </LinearGradientBrush>
+                </DataGrid.RowBackground>
+
+            </DataGrid>
+
+        </Grid>
+
+
+    </Grid>
+</Window>
