@@ -187,7 +187,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                     <DataGridTextColumn Header="Type" Binding="{Binding Type}" />
-                    <DataGridTextColumn Header="Time" Binding="{Binding Time}" />
+                    <DataGridTextColumn Header="Time" Binding="{Binding Time, StringFormat='{}{0:yyyy MM dd}'}" />
                     <!-- 隐藏 Id 和 UserId -->
                     <!--<DataGridTextColumn Header="Id" Binding="{Binding Id}" Visibility="Collapsed" />
                     <DataGridTextColumn Header="UserId" Binding="{Binding UserId}" Visibility="Collapsed" />-->
