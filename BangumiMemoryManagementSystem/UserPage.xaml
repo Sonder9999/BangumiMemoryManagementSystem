@@ -55,7 +55,7 @@
         <Image Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Source="pic/logo/logo_Natsu.png" Stretch="Uniform" Panel.ZIndex="-1" Margin="0,65,0,0"/>
 
         <!-- Exit Button -->
-        <Button Name="Exit_Button_UserPage" Content="Exit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="54" Width="112" Click="Exit_Button_UserPage_Click" Margin="0,10,10,0" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" Panel.ZIndex="0" >
+        <Button Name="Exit_Button_UserPage" Content="Exit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="54" Width="112" Click="Exit_Button_UserPage_Click" Margin="0,10,10,0" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" Panel.ZIndex="0" >
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFF5AAFF"/>
@@ -115,14 +115,14 @@
                 <!--<Label Content="ID"  Margin="10" VerticalAlignment="Center"/>
                 <TextBox x:Name="Id_TextBox_UserPage" Grid.Column="1" Margin="10"  IsEnabled="False" Width="80" Height="30"/>-->
 
-                <Label Content="Name" Grid.Column="0" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="Name_TextBox_UserPage" Grid.Column="1" Margin="10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+                <Label Content="Name" Grid.Column="0" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Name_TextBox_UserPage" Grid.Column="1" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
-                <Label Content="Type" Grid.Column="2" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="Type_TextBox_UserPage" Grid.Column="3" Margin="10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+                <Label Content="Type" Grid.Column="2" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Type_TextBox_UserPage" Grid.Column="3" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
-                <Label Content="Time" Grid.Column="4" Grid.Row="1" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="Time_TextBox_UserPage" Grid.Column="5" Margin="14,10,0,10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+                <Label Content="Time" Grid.Column="4" Grid.Row="1" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Time_TextBox_UserPage" Grid.Column="5" Margin="14,10,0,10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
             </Grid>
 
@@ -130,7 +130,7 @@
             <!-- Part2 增删改查的Button -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
 
-                <Button x:Name="Add_Button_UserPage" Content="Add"  Width="70" Height="33" Click="Add_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                <Button x:Name="Add_Button_UserPage" Content="Add"  Width="70" Height="33" Click="Add_Button_UserPage_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF30F0F6" Offset="1"/>
@@ -140,7 +140,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="Delete_Button_UserPage" Content="Delete" Width="70" Height="33" Click="Delete_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                <Button x:Name="Delete_Button_UserPage" Content="Delete" Width="70" Height="33" Click="Delete_Button_UserPage_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFFA0202"/>
@@ -150,7 +150,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="Save_Button_UserPage" Content="Save"  Width="68" Height="33" Click="Save_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                <Button x:Name="Save_Button_UserPage" Content="Save"  Width="68" Height="33" Click="Save_Button_UserPage_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFC2FFAC"/>
@@ -159,9 +159,9 @@
                     </Button.Background>
                 </Button>
 
-                <TextBox x:Name="Search_TextBox_UserPage"  Width="140" Height="33" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Search_TextBox_UserPage"  Width="140" Height="33" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
 
-                <Button x:Name="Search_Button_UserPage" Content="Search" Width="82" Height="33" Click="Search_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                <Button x:Name="Search_Button_UserPage" Content="Search" Width="82" Height="33" Click="Search_Button_UserPage_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFFFCDCD"/>
@@ -170,7 +170,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="Reset_Button_UserPage" Content="Reset" Width="82" Height="33" Click="Reset_Button_UserPage_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                <Button x:Name="Reset_Button_UserPage" Content="Reset" Width="82" Height="33" Click="Reset_Button_UserPage_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF74FF7A"/>
@@ -182,7 +182,7 @@
             </StackPanel>
 
             <!-- Part3 DataGrid -->
-            <DataGrid x:Name="Bangumi_DataGrid_UserPage" Grid.Row="2" Margin="10" d:ItemsSource="{d:SampleData ItemCount=5}" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" 
+            <DataGrid x:Name="Bangumi_DataGrid_UserPage" Grid.Row="2" Margin="10" d:ItemsSource="{d:SampleData ItemCount=5}" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" 
                    IsReadOnly="True" CanUserAddRows="False"  CanUserDeleteRows="False" AutoGenerateColumns="False" SelectionChanged="Bangumi_DataGrid_UserPage_SelectionChanged" SelectionUnit="FullRow">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Name" Binding="{Binding Name}" />

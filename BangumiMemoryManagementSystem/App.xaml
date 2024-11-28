@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:BangumiMemoryManagementSystem"
              StartupUri="Login.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Font_YoZai">
+            /BangumiMemoryManagementSystem;Component/Fonts/Yozai-Regular.ttf#悠哉字体
+        </FontFamily>
+        <FontFamily x:Key="Font_XiaoWei">
+            /BangumiMemoryManagementSystem;Component/Fonts/站酷小薇LOGO体.otf#站酷小薇LOGO体
+        </FontFamily>
     </Application.Resources>
 </Application>
+
+<!--字体引入: https://blog.csdn.net/qq_39427511/article/details/128028733-->

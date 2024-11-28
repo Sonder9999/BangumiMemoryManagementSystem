@@ -70,7 +70,7 @@
         <Image Grid.Row="2" Grid.ColumnSpan="3" Source="pic/Slide/Slide_Bottom_Makeine.png" Stretch="Uniform" MaxHeight="100"/>
 
         <!-- Exit Button -->
-        <Button x:Name="Exit_Button_AdminUserManagement" Content="Exit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="54" Width="112" Click="Exit_Button_AdminUserManagement_Click" Margin="0,10,10,0" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold"  >
+        <Button x:Name="Exit_Button_AdminUserManagement" Content="Exit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="54" Width="112" Click="Exit_Button_AdminUserManagement_Click" Margin="0,10,10,0" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold"  >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF5AAFF"/>
@@ -80,7 +80,7 @@
         </Button>
 
         <!-- Statistics Button -->
-        <Button x:Name="Statistics_Button_AdminUser" Content="Statistics"  Click="Statistics_Button_AdminUser_Click" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="112" Margin="10,10,0,0" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+        <Button x:Name="Statistics_Button_AdminUser" Content="Statistics"  Click="Statistics_Button_AdminUser_Click" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="112" Margin="10,10,0,0" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF7DC0D9" Offset="1"/>
@@ -122,14 +122,14 @@
                 </Grid.ColumnDefinitions>
 
                 <!--这里将ID设置为了不可见-->
-                <Label x:Name="Id_Label_AdminUser" Visibility="Hidden" Content="ID"  Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="Id_TextBox_AdminUser" Visibility="Hidden" Grid.Column="1" Margin="10"  IsEnabled="False" Width="80" Height="30" FontFamily="悠哉字体" FontSize="20" />
+                <Label x:Name="Id_Label_AdminUser" Visibility="Hidden" Content="ID"  Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Id_TextBox_AdminUser" Visibility="Hidden" Grid.Column="1" Margin="10"  IsEnabled="False" Width="80" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
-                <Label x:Name="UserName_Label_AdminUser" Content="UserName" Grid.Column="2" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="UserName_TextBox_AdminUser" Grid.Column="3" Margin="10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+                <Label x:Name="UserName_Label_AdminUser" Content="UserName" Grid.Column="2" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="UserName_TextBox_AdminUser" Grid.Column="3" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
-                <Label x:Name="UserPassword_Label_AdminUser" Content="Password" Grid.Column="4" Margin="10" VerticalAlignment="Center" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="UserPassword_TextBox_AdminUser" Grid.Column="5" Margin="10" Width="140" Height="30" FontFamily="悠哉字体" FontSize="20" />
+                <Label x:Name="UserPassword_Label_AdminUser" Content="Password" Grid.Column="4" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="UserPassword_TextBox_AdminUser" Grid.Column="5" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
 
             </Grid>
@@ -137,7 +137,7 @@
             <!-- Part 2 Button -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
 
-                <Button x:Name="Add_Button_AdminUser" Content="Add"  Width="70" Height="33" Click="Add_Button_AdminUser_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold">
+                <Button x:Name="Add_Button_AdminUser" Content="Add"  Width="70" Height="33" Click="Add_Button_AdminUser_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF30F0F6" Offset="1"/>
@@ -147,7 +147,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="Delete_Button_AdminUser" Content="Delete" Width="70" Height="33" Click="Delete_Button_AdminUser_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold">
+                <Button x:Name="Delete_Button_AdminUser" Content="Delete" Width="70" Height="33" Click="Delete_Button_AdminUser_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFFA0202"/>
@@ -157,7 +157,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="Save_Button_AdminUser" Content="Save"  Width="68" Height="33" Click="Save_Button_AdminUser_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                <Button x:Name="Save_Button_AdminUser" Content="Save"  Width="68" Height="33" Click="Save_Button_AdminUser_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFC2FFAC"/>
@@ -166,9 +166,9 @@
                     </Button.Background>
                 </Button>
 
-                <TextBox x:Name="Search_TextBox_AdminUser"  Width="140" Height="33" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" />
+                <TextBox x:Name="Search_TextBox_AdminUser"  Width="140" Height="33" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
 
-                <Button x:Name="Search_Button_AdminUser" Content="Search" Width="82" Height="33" Click="Search_Button_AdminUser_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" >
+                <Button x:Name="Search_Button_AdminUser" Content="Search" Width="82" Height="33" Click="Search_Button_AdminUser_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFFFCDCD"/>
@@ -177,7 +177,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="Reset_Button_AdminUser" Content="Reset" Width="82" Height="33" Click="Reset_Button_AdminUser_Click" Margin="5" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold"  >
+                <Button x:Name="Reset_Button_AdminUser" Content="Reset" Width="82" Height="33" Click="Reset_Button_AdminUser_Click" Margin="5" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold"  >
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF74FF7A"/>
@@ -190,7 +190,7 @@
 
 
             <!-- Part 3 DataGrid -->
-            <DataGrid x:Name="User_DataGrid_AdminUser" Grid.Row="2" Margin="10" d:ItemsSource="{d:SampleData ItemCount=5}"  FontFamily="悠哉字体" FontSize="20" FontWeight="Bold"
+            <DataGrid x:Name="User_DataGrid_AdminUser" Grid.Row="2" Margin="10" d:ItemsSource="{d:SampleData ItemCount=5}"  FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold"
                      IsReadOnly="True" CanUserAddRows="False"  CanUserDeleteRows="False" AutoGenerateColumns="False" SelectionChanged="User_DataGrid_AdminUser_SelectionChanged_1" SelectionUnit="FullRow">
 
                 <DataGrid.Columns>

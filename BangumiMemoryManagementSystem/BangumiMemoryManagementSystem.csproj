@@ -134,6 +134,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\Yozai-Bold.ttf" />
+    <Resource Include="Fonts\Yozai-Light.ttf" />
+    <Resource Include="Fonts\Yozai-Medium.ttf" />
+    <Resource Include="Fonts\Yozai-Regular.ttf" />
+    <Resource Include="Fonts\站酷小薇LOGO体.otf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

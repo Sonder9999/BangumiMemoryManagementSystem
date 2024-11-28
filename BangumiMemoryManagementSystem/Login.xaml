@@ -69,14 +69,14 @@
         <!-- 使用 StackPanel 垂直排列输入控件 -->
         <StackPanel Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center">
 
-            <TextBox Name="UserName_TextBox_Login" Text=""  TextAlignment="Center" VerticalContentAlignment="Center"  FontFamily="站酷文艺体" FontSize="24" Margin="0,0,0,10" Width="162" Height="26"/>
+            <TextBox Name="UserName_TextBox_Login" Text=""  TextAlignment="Center" VerticalContentAlignment="Center"  FontFamily="{StaticResource Font_YoZai}" FontSize="24" Margin="0,0,0,10" Width="162" Height="26"/>
 
-            <PasswordBox Name="Password_PasswordBox_Login" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  PasswordChar="*" FontFamily="站酷文艺体" FontSize="24" Margin="0,0,0,10" Width="162" Height="26"/>
+            <PasswordBox Name="Password_PasswordBox_Login" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  PasswordChar="*" FontFamily="{StaticResource Font_YoZai}" FontSize="24" Margin="0,0,0,10" Width="162" Height="26"/>
 
             <!-- 水平排列按钮 这里的是 SignUp 和 Login 按钮-->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-                <Button Name="Signup_Button_Login" Content="注册" Click="Signup_Button_Login_Click" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold" Margin="0,0,10,0">
+                <Button Name="Signup_Button_Login" Content="注册" Click="Signup_Button_Login_Click" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" Margin="0,0,10,0">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFDAA6F7" Offset="1"/>
@@ -85,7 +85,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button Name="Login_Button_Login" Content="登录" Click="Login_Button_Login_Click" FontFamily="悠哉字体" FontSize="20" FontWeight="Bold">
+                <Button Name="Login_Button_Login" Content="登录" Click="Login_Button_Login_Click" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF4FF4D6" Offset="0"/>
@@ -97,7 +97,7 @@
             </StackPanel>
 
             <!-- 这里是Admin按钮 -->
-            <Button Name="Admin_Button_Login" Content="Admin" HorizontalAlignment="Center" Click="Admin_Button_Login_Click" FontFamily="站酷小薇LOGO体" FontSize="24" Margin="0,10,0,0">
+            <Button Name="Admin_Button_Login" Content="Admin" HorizontalAlignment="Center" Click="Admin_Button_Login_Click" FontFamily="{StaticResource Font_XiaoWei}" FontSize="24" Margin="0,10,0,0">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF7DE7FF"/>
