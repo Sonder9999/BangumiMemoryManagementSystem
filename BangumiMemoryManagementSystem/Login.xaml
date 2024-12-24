@@ -46,7 +46,7 @@
 
         </Grid.ColumnDefinitions>
 
-        
+
         <!-- Top Middle Logo -->
         <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Source="pic/logo/Logo_Top_SonderBangumi.png" Stretch="Uniform" MaxWidth="857" MaxHeight="250"/>
 

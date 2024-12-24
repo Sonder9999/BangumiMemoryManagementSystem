@@ -126,10 +126,10 @@
                 <TextBox x:Name="Id_TextBox_AdminUser" Visibility="Hidden" Grid.Column="1" Margin="10"  IsEnabled="False" Width="80" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
                 <Label x:Name="UserName_Label_AdminUser" Content="UserName" Grid.Column="2" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="UserName_TextBox_AdminUser" Grid.Column="3" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
+                <TextBox x:Name="UserName_TextBox_AdminUser" Grid.Column="3" Margin="10" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
                 <Label x:Name="UserPassword_Label_AdminUser" Content="Password" Grid.Column="4" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="UserPassword_TextBox_AdminUser" Grid.Column="5" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
+                <TextBox x:Name="UserPassword_TextBox_AdminUser" Grid.Column="5" Margin="10" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
 
             </Grid>

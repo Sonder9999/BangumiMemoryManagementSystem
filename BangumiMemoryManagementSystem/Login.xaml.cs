@@ -49,6 +49,8 @@ namespace BangumiMemoryManagementSystem
             }
         }
 
+
+
         private void Signup_Button_Login_Click(object sender, RoutedEventArgs e)
         {
             if (UserName_TextBox_Login.Text == "" || Password_PasswordBox_Login.Password == "")

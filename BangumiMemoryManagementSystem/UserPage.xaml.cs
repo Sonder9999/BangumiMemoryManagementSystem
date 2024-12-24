@@ -192,7 +192,8 @@ namespace BangumiMemoryManagementSystem
                 //Id_TextBox_UserPage.Text = selectedBangumi.Id.ToString();
                 Name_TextBox_UserPage.Text = selectedBangumi.Name;
                 Type_TextBox_UserPage.Text = selectedBangumi.Type;
-                Time_TextBox_UserPage.Text = selectedBangumi.Time.ToString("yyyy-MM-dd HH:mm:ss"); // 格式化时间
+                //Time_TextBox_UserPage.Text = selectedBangumi.Time.ToString("yyyy-MM-dd HH:mm:ss"); // 格式化时间
+                Time_TextBox_UserPage.Text = selectedBangumi.Time.ToString("yyyy MM dd"); // 格式化时间
             }
         }
 

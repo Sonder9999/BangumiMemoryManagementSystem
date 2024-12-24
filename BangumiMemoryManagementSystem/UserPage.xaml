@@ -116,13 +116,13 @@
                 <TextBox x:Name="Id_TextBox_UserPage" Grid.Column="1" Margin="10"  IsEnabled="False" Width="80" Height="30"/>-->
 
                 <Label Content="Name" Grid.Column="0" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="Name_TextBox_UserPage" Grid.Column="1" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
+                <TextBox x:Name="Name_TextBox_UserPage" Grid.Column="1" Margin="10,13,10,13" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
                 <Label Content="Type" Grid.Column="2" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="Type_TextBox_UserPage" Grid.Column="3" Margin="10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
+                <TextBox x:Name="Type_TextBox_UserPage" Grid.Column="3" Margin="10,13,10,13" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
                 <Label Content="Time" Grid.Column="4" Grid.Row="1" Margin="10" VerticalAlignment="Center" FontFamily="{StaticResource Font_YoZai}" FontSize="20" FontWeight="Bold" />
-                <TextBox x:Name="Time_TextBox_UserPage" Grid.Column="5" Margin="14,10,0,10" Width="140" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
+                <TextBox x:Name="Time_TextBox_UserPage" Grid.Column="5" Margin="10,13,10,13" Height="30" FontFamily="{StaticResource Font_YoZai}" FontSize="20" />
 
             </Grid>
 
