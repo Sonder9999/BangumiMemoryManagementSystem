@@ -196,3 +196,8 @@ CREATE TABLE [dbo].[User] (
   - [windows系统下，在C#程序中自动安装字体 - 一只独行的猿 - 博客园](https://www.cnblogs.com/pilgrim/p/11135273.html)
 - `.NET Core` 转 `.NET Framework` 配置
   - [Visual studio将.net core 目标框架更换为.netframework_visualstudio 目标框架-CSDN博客](https://blog.csdn.net/weixin_43808473/article/details/124260862)
+
+
+## 开源协议 / License
+
+本项目采用 [MIT License](LICENSE) 许可协议。
